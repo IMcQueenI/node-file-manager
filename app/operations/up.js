@@ -5,7 +5,7 @@ const up = async () => {
     process.chdir('..');
     workingDirectory();
   } catch (error) {
-    console.error ('Operation failed');
+    console.error ('Operation failed\n');
   }
 };
 

@@ -7,7 +7,7 @@ const cd = async (path) => {
       process.chdir(path)
       workingDirectory();
     } catch (error) {
-      console.error ('Operation failed')
+      console.error ('Operation failed\n')
     }
 };
 
