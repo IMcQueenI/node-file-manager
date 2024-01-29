@@ -1,6 +1,6 @@
 import { rl } from '../../index.js';
+import { add } from '../operations/add.js';
 import { cd } from '../operations/cd.js';
-import { ls  } from '../operations/ls.js';
 import { up } from '../operations/up.js';
 
 function handler(command) {
@@ -14,9 +14,9 @@ function handler(command) {
         case 'up':
           up();
           break;
-        case 'ls':
-          ls();
-          break;
+        // case 'ls':
+        //   ls();
+        //   break;
         case '.exit':
           rl.close();
           break;
@@ -28,6 +28,9 @@ function handler(command) {
       switch(operation[0].toString()) {
         case 'cd':
           cd(args);
+          break;
+        case 'add':
+          add(args);
           break;
         default:
           throw new Error('Invalid input');
