@@ -2,8 +2,6 @@ import { createHash } from 'crypto'
 import  { readFile } from 'fs/promises'
 import { workingDirectory } from '../utils/helpers.js';
 
-// only works with an absolute path
-
 const hash = async (file) => {
   try {
     const hashFile = await readFile(file);
