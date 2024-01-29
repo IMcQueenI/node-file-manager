@@ -2,6 +2,7 @@ import { rl } from '../../index.js';
 import { add } from '../operations/add.js';
 import { cd } from '../operations/cd.js';
 import { hash } from '../operations/hash.js';
+import { remove } from '../operations/rm.js';
 import { up } from '../operations/up.js';
 
 function handler(command) {
@@ -35,6 +36,9 @@ function handler(command) {
           break;
         case 'hash':
           hash(args);
+          break;
+        case 'rm':
+          remove(args);
           break;
         default:
           throw new Error('Invalid input');
