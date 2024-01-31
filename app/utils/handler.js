@@ -6,6 +6,9 @@ import { ls } from '../operations/ls.js';
 import { remove } from '../operations/rm.js';
 import { up } from '../operations/up.js';
 import { rn } from '../operations/rn.js';
+import { cp } from '../operations/cp.js';
+import { cat } from '../operations/cat.js';
+import { mv } from '../operations/mv.js';
 
 function handler(command) {
   command = command.trim();
@@ -39,6 +42,9 @@ function handler(command) {
         case 'hash':
           hash(args);
           break;
+        case 'cat':
+          cat(args);
+          break;
         case 'rm':
           remove(args);
           break;
@@ -49,6 +55,12 @@ function handler(command) {
       switch (operation[0].toString()) {
         case 'rn': 
           rn(operation[1], operation[2]);
+          break;
+        case 'cp': 
+          cp(operation[1], operation[2]);
+          break;
+        case 'mv': 
+          mv(operation[1], operation[2]);
           break;
         default:
           throw new Error('Invalid input');
