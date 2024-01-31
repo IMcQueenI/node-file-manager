@@ -8,7 +8,7 @@ const add = async (fileName) => {
     (await open(path, 'w')).close();
     workingDirectory();
   } catch (error) {
-    console.error ('Operation failed\n')
+    console.error ('Operation failed\n');
   }
 }
 

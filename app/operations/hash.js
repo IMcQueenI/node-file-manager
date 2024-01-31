@@ -1,5 +1,5 @@
-import { createHash } from 'crypto'
-import  { readFile } from 'fs/promises'
+import { createHash } from 'crypto';
+import  { readFile } from 'fs/promises';
 import { workingDirectory } from '../utils/helpers.js';
 
 const hash = async (file) => {
@@ -9,7 +9,7 @@ const hash = async (file) => {
     console.log(hash);
     workingDirectory();
   } catch (error) {
-    console.error ('Operation failed\n')
+    console.error ('Operation failed\n');
   }
 }
 

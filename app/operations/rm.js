@@ -6,7 +6,7 @@ const remove = async (path) => {
     await rm(path);
     workingDirectory();
   } catch (error) {
-    console.error ('Operation failed\n')
+    console.error ('Operation failed\n');
   }
 }
 

@@ -1,4 +1,4 @@
-import { workingDirectory } from "../utils/helpers.js";
+import { workingDirectory } from '../utils/helpers.js';
 
 const up = async () => {
   try {
