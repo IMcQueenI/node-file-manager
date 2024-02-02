@@ -9,6 +9,9 @@ import { rn } from '../operations/rn.js';
 import { cp } from '../operations/cp.js';
 import { cat } from '../operations/cat.js';
 import { mv } from '../operations/mv.js';
+import { compress } from '../operations/compress.js';
+import { osInfo } from '../operations/os.js';
+import { decompress } from '../operations/decompress.js';
 
 function handler(command) {
   command = command.trim();
@@ -45,6 +48,9 @@ function handler(command) {
         case 'cat':
           cat(args);
           break;
+        case 'os':
+          osInfo(args);
+          break;
         case 'rm':
           remove(args);
           break;
@@ -61,6 +67,12 @@ function handler(command) {
           break;
         case 'mv': 
           mv(operation[1], operation[2]);
+          break;
+        case 'compress': 
+          compress(operation[1], operation[2]);
+          break;
+        case 'decompress': 
+          decompress(operation[1], operation[2]);
           break;
         default:
           throw new Error('Invalid input');

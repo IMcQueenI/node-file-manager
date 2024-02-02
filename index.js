@@ -1,7 +1,9 @@
 import readline from 'readline';
 import { handler } from './app/utils/handler.js';
 import { goodbye, greeting, workingDirectory } from './app/utils/helpers.js';
+import { homedir } from 'os'
 
+process.chdir(homedir());
 greeting();
 workingDirectory();
 
